@@ -111,5 +111,5 @@ summarytable <- combineddata %>%
   arrange(subjectID,activity,feature)
 
 ### output a copy of the tables generated
-write.csv(combineddata,file="aggregate_data.csv",row.names=FALSE)
-write.csv(summarytable,file="summary_means.csv",row.names=FALSE)
+write.table(combineddata,file="aggregate_data.txt",row.names=FALSE)
+write.table(summarytable,file="summary_means.txt",row.names=FALSE)
