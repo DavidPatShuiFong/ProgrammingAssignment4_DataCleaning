@@ -75,11 +75,11 @@ traintable$group <- 'train'
 combineddata <- full_join(testtable,traintable)
 
 ### remove the 'features' measurements which do not contain std or mean values
-### find the labels which contain Mean/mean or Std/std, and then the complement labels
-stdmeanlabel <- grepl('[Mm]ean',featureslabels[,2]) | grepl('[Ss]td',featureslabels[,2])
+### find the labels which contain mean or std (case insensitive), and then the complement labels
+stdmeanlabel <- grepl('mean',featureslabels[,2],ignore.case = TRUE) | grepl('std',featureslabels[,2],ignore.case = TRUE)
 notstdmeanlabel <- !stdmeanlabel
 
-### remove the features labels which don't have Mean/mean or Std/std
+### remove the features labels which don't have mean or std
 ### *** Assignment task 2 ***
 combineddata <- combineddata[,-which(names(combineddata) %in% featureslabels[notstdmeanlabel,2])]
 
