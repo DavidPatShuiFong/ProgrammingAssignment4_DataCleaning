@@ -17,4 +17,9 @@ Resulting table includes the following columns
 4. feature - one of 86 'feature' measurements, either a mean or std (standard deviation)
 5. mean - mean of the all of the feature measurements groups for the relevant subject and activity
 
-see README.txt for more details about the eight-six feature types
+* see **summary_means.csv** for result of the summarization
+* see **aggregate_data.csv** for 'untidy' version of the combined data, before the means are calculated
+* see **Codebook.md** for more details about the data transformation done by run_analysis.R 
+* see **README.txt** for more details about the eight-six 'feature' types
+
+David Fong
