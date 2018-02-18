@@ -40,7 +40,13 @@ run_analysis steps and variables
 * create a summary table
   * means are calculated for each of the retained 'features' which include 'mean' or 'std' in the name
   * the table is 'tidied' by gathering each calculated 'mean' into its own row
-  * each row is identified by subjectID, group (either 'test' or 'train), activity and 'feature' measurement type
+  * each row has **subjectID**, **activity** and **feature** columns describing the data calculated in the **mean** column. each row also has a **group** column identifying the subject's source group.
+    * **subjectID** - identifier for test subjects, 1 to 30
+    * **activity** - description of activity during measurement
+      * one of 'STANDING', 'SITTING', 'LAYING', 'WALKING', 'WALKING_DOWNSTAIRS', 'WALKING_UPSTAIRS'
+    * **feature** - measurement being taken, eight-six different measurements, see README.txt for more details
+    * **group** - the subject came either from the 'test' or 'train' group
+    * **mean** - the mean of the **feature** for the **subjectID** doing **activity**
 
 * creates tables are written to files
   * summarytable is written to 'summary_means.csv'
