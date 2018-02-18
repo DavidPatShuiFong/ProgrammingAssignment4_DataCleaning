@@ -32,6 +32,8 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
 run_analysis steps and variables
 
+* uses libraries dplyr, tidyr and stringr
+
 * read label data from files in 'UCI HAR Dataset' directory
   * read column labels for the 'features' data into 'featureslabels' from 'features.txt'
   * read activity descriptions into 'activitylabels' from 'activity_labels.txt'
@@ -44,7 +46,7 @@ run_analysis steps and variables
   * for participants in train group read subject identifiers 'trainsubjects', subject activity 'trainactivity', and the measurements 'trainfeatures' from the 'train' directory. similar filenames to 'test' subjects
 
 * column names are added to the data tables
- * 'features' labels are modified to suitable column names for R and readability e.g. removal of brackets, periods and underscores
+ * 'features' labels are modified to suitable column names for R and readability : expanded abbreviations, removal of non-alphanumerics
 
 * combine all 'test' tables into 'testtable' and combine all 'train' tables into 'traintable'
 * add a 'group' column to identify data as originally coming from a 'test' or 'train' participant
