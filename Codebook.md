@@ -7,7 +7,7 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
 
-for run_analysis steps and variables see **README.md**
+for run_analysis steps and variables see **README.md**.
 for an example output file see **summary_means.txt**
 
 * each row has **subjectID**, **activity** and **feature** columns describing the data calculated in the **mean** column. each row also has a **group** column identifying the subject's source group.
