@@ -109,3 +109,7 @@ summarytable <- combineddata %>%
   summarize_(.dots = setNames(summarizefunction,summarizefeature)) %>%
   gather(feature,mean,-c('subjectID','activity','group')) %>%
   arrange(subjectID,activity,feature)
+
+### output a copy of the tables generated
+write.csv(combineddata,file="aggregate_data.csv",row.names=FALSE)
+write.csv(summarytable,file="summary_means.csv",row.names=FALSE)
