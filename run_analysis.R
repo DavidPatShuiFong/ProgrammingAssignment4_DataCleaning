@@ -10,6 +10,7 @@
 
 library(dplyr)
 library(tidyr)
+library(stringr)
 
 ### move into the Dataset's directory, and then read raw data into tables
 basedirectory <- getwd()
@@ -42,9 +43,14 @@ setwd(basedirectory)
 ### *** Assignment task 4 ***
 
 ### label the features (of measurements) columns
+### change column names to be more consistent or human readable (using str_replace_all from 'stringr')
 ### make the features labels valid column names, strip all periods and underscores
 ### then add the column names to the features tables
-featureslabels[,2]=gsub('\\.','',make.names(featureslabels[,2],unique=TRUE,allow_=FALSE))
+featureslabels[,2] <- featureslabels[,2] %>%
+  str_replace_all(c('Acc'='Acceleration','Gyro'='AngularVelocity','Mag'='Magnitude','jerk'='Jerk',
+                    'mean'='Mean','std'='StandardDeviation')) %>%
+  make.names(unique=TRUE,allow_=FALSE) %>%
+  str_replace_all(c('\\.'='')) ### need to remove periods last, as make.names creates periods '.'
 
 colnames(testfeatures) <- featureslabels[,2]
 colnames(trainfeatures) <- featureslabels[,2]
@@ -76,12 +82,11 @@ combineddata <- full_join(testtable,traintable)
 
 ### remove the 'features' measurements which do not contain std or mean values
 ### find the labels which contain mean or std (case insensitive), and then the complement labels
-stdmeanlabel <- grepl('mean',featureslabels[,2],ignore.case = TRUE) | grepl('std',featureslabels[,2],ignore.case = TRUE)
-notstdmeanlabel <- !stdmeanlabel
+stdmeanlabel <- grepl('mean|standarddeviation',featureslabels[,2],ignore.case = TRUE)
 
 ### remove the features labels which don't have mean or std
 ### *** Assignment task 2 ***
-combineddata <- combineddata[,-which(names(combineddata) %in% featureslabels[notstdmeanlabel,2])]
+combineddata <- combineddata[,-which(names(combineddata) %in% featureslabels[!stdmeanlabel,2])]
 
 ### use descriptive activity names to name the activities in the data set
 ### *** Assignment task 3 ***
@@ -92,7 +97,7 @@ combineddata <- mutate(combineddata, activity=activitylabels[activity,2])
 ### *** Assignment task 5 ***
 
 ### define features to be summarized
-### creates two vectors, first with the mean() function, the second with the column name
+### creates two vectors, first with the mean() funciton, the second with the column name
 summarizefunction <- paste0('mean(',featureslabels[stdmeanlabel,2],')')
 summarizefeature <- paste0(featureslabels[stdmeanlabel,2])
 
