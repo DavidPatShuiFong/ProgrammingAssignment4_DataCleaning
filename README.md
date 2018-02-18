@@ -17,8 +17,8 @@ Resulting table includes the following columns
 4. **feature** - one of 86 'feature' measurements, either a mean or std (standard deviation)
 5. **mean** - mean of all of the feature measurements groups for the relevant subject and activity
 
-* see **summary_means.csv** for result of the summarization
-* see **aggregate_data.csv** for 'untidy' version of the combined data, before the means are calculated
+* see **summary_means.txt** for result of the summarization
+* see **aggregate_data.txt** for 'untidy' version of the combined data, before the means are calculated
 * see **Codebook.md** for more details about the output data in **summary_means.csv**
 * see **README.txt** for more details about the eight-six 'feature' types
 
