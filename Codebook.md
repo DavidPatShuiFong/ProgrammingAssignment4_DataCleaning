@@ -23,7 +23,7 @@ for an example output file see **summary_means.txt**
 *note that the names have been **translated** from the original 'feature' names*
 
 translation is as follows:
-* all non-alphanumerics removed including periods
+* all non-alphanumerics (including periods) removed
 * translated abbreviations as follows : 'Acc'->'Acceleration','Gyro'->'AngularVelocity','Mag'->'Magnitude','jerk'->'Jerk','std'->'StandardDeviation'
 
  [1] "tBodyAccelerationMeanX"                                 "tBodyAccelerationMeanY"                                
