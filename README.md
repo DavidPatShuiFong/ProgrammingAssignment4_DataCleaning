@@ -11,11 +11,11 @@ Script : run_analysis.R
 
 Resulting table includes the following columns
 
-1. subjectID - original ID (1 to 30) of the study participants
-2. group - whether the participant was in the 'train' or 'test' group
-3. activity - the activity during the measurements, one of 'WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING'
-4. feature - one of 86 'feature' measurements, either a mean or std (standard deviation)
-5. mean - mean of the all of the feature measurements groups for the relevant subject and activity
+1. **subjectID** - original ID (1 to 30) of the study participants
+2. **group** - whether the participant was in the 'train' or 'test' group
+3. **activity** - the activity during the measurements, one of 'WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING'
+4. **feature** - one of 86 'feature' measurements, either a mean or std (standard deviation)
+5. **mean** - mean of the all of the feature measurements groups for the relevant subject and activity
 
 * see **summary_means.csv** for result of the summarization
 * see **aggregate_data.csv** for 'untidy' version of the combined data, before the means are calculated
