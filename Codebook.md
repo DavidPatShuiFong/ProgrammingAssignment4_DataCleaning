@@ -40,7 +40,7 @@ run_analysis steps and variables
   * each row is identified by subjectID, group (either 'test' or 'train), activity and 'feature' measurement type
 
 * creates tables are written to files
-  * summary table is written to 'summary_means.csv'
-  * the combinedtable is written to 'aggregate_data.csv'
+  * summarytable is written to 'summary_means.csv'
+  * combinedtable is written to 'aggregate_data.csv'
 
 written by David Fong for 'Getting and Cleaning Data' Homework Week 4
