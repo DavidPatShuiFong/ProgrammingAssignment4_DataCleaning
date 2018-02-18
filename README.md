@@ -55,7 +55,6 @@ run_analysis steps and variables
 
 * retain all of the original 'features' columns in combineddata which include 'std' or 'mean' in the label. remove all 'features' columns which do not include 'std' or 'mean' in the name
   * stdmeanlabel is a TRUE/FALSE vector of all featureslabels which include 'std/Std' or 'mean/Mean'
-  * notstdmeanlabel is a TRUE/FALSE vector of all featureslabels which do not include 'std/Std' or 'mean/Mean'
 
 * change the activity column in combineddata to a descriptive factor e.g. 'WALKING' or 'SITTING'
 
