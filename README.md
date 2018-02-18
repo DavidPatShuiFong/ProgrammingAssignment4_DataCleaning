@@ -68,7 +68,7 @@ run_analysis steps and variables
     * **subjectID** - identifier for test subjects, 1 to 30
     * **activity** - description of activity during measurement
       * one of 'STANDING', 'SITTING', 'LAYING', 'WALKING', 'WALKING_DOWNSTAIRS', 'WALKING_UPSTAIRS'
-    * **feature** - measurement being taken, eight-six different measurements, see README.txt for more details
+    * **feature** - measurement being taken, eight-six different measurements, see Codebook.MD or README.txt for more details
     * **group** - the subject came either from the 'test' or 'train' group
     * **mean** - the mean of the **feature** for the **subjectID** doing **activity**
 
