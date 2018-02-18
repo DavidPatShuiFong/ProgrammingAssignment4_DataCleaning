@@ -92,7 +92,7 @@ combineddata <- mutate(combineddata, activity=activitylabels[activity,2])
 ### *** Assignment task 5 ***
 
 ### define features to be summarized
-### creates two vectors, first with the mean() funciton, the second with the column name
+### creates two vectors, first with the mean() function, the second with the column name
 summarizefunction <- paste0('mean(',featureslabels[stdmeanlabel,2],')')
 summarizefeature <- paste0(featureslabels[stdmeanlabel,2])
 
