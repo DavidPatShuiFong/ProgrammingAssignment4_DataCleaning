@@ -74,7 +74,7 @@ run_analysis steps and variables
     * **mean** - the mean of the **feature** for the **subjectID** doing **activity**
 
 * creates tables are written to files
-  * summarytable is written to 'summary_means.csv'
-  * combinedtable is written to 'aggregate_data.csv'
+  * summarytable is written to 'summary_means.txt'
+  * combinedtable is written to 'aggregate_data.txt'
 
 David Fong
