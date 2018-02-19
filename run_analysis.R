@@ -93,11 +93,12 @@ combineddata <- combineddata[,-which(names(combineddata) %in% featureslabels[!st
 combineddata <- mutate(combineddata, activity=activitylabels[activity,2])
 
 ### create tidy summary of retained features (those with 'std' and 'mean')
-### grouped by subjectID and activity
+### 'average of each variable for each activity and each subject'
+### group by subjectID and activity
 ### *** Assignment task 5 ***
 
 ### define features to be summarized
-### creates two vectors, first with the mean() funciton, the second with the column name
+### creates two vectors, first with the mean() function, the second with the column name
 summarizefunction <- paste0('mean(',featureslabels[stdmeanlabel,2],')')
 summarizefeature <- paste0(featureslabels[stdmeanlabel,2])
 
@@ -107,8 +108,8 @@ combineddata <- group_by(combineddata,subjectID,group,activity)
 ### summarize combineddata
 ### define (multiple) columns and means to calculate with standard evaluation
 ### using 'summarize_()' standard evaluation version of 'summarize()'
-### then 'tidy' up data by gathering different features measurements into their own row
-### (preserving 'subjectID' and 'activity' columns)
+### then 'tidy' up data by gathering average(/mean) of different features measurements into their own row
+### (preserving 'subjectID' and 'activity' and 'group' columns)
 ### then sort the data according to subjectID, activity and feature
 summarytable <- combineddata %>%
   summarize_(.dots = setNames(summarizefunction,summarizefeature)) %>%
