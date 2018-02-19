@@ -7,7 +7,7 @@ The volunteers undertook six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWN
 Script : run_analysis.R 
 1. merges the summary 'features' data of both training and test groups
 2. creates a summary of all measures/features which are 'mean' or 'std'
-3. 'tidys' up the dataset, so that all summary measures/features are on individual rows (as per requirement of'average of each variable for each activity and each subject')
+3. 'tidys' up the dataset, so that all summary measures/features are on individual rows (as per requirement of 'average of each variable for each activity and each subject')
 
 Resulting table includes the following columns
 
